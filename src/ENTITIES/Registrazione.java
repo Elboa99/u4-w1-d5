@@ -1,6 +1,6 @@
 package ENTITIES;
 
-import INTAERFACES.Play;
+import INTERFACES.Play;
 
 import java.util.Scanner;
 
@@ -12,10 +12,6 @@ public class Registrazione extends ElementoMultimedia implements Play {
     private int duration;
 
 
-
-    /*METODO*/
-
-
     /* COSTRUTTORI*/
     public Registrazione(String title, int volume, int duration) {
         super(title);
@@ -25,23 +21,23 @@ public class Registrazione extends ElementoMultimedia implements Play {
 
     // 3- Metodi
     public void alzaVolume() {
-        System.out.println("Inserire nuovo valore volume");
+        System.out.println("Insert new Volume number");
         int valoreVolume = Integer.parseInt(scanner.nextLine());
         if (valoreVolume > 0 && valoreVolume > this.volume) {
             setVolume(valoreVolume);
         } else {
-            System.out.println("Impossibile alzare il volume, prego inserire valore corretto:");
+            System.out.println("Can't Turn up the volume, please Try Again");
             valoreVolume = Integer.parseInt(scanner.nextLine());
         }
     }
 
     public void abbassaVolume() {
-        System.out.println("Inserire nuovo valore volume");
+        System.out.println("Insert new Volume number");
         int valoreVolume = Integer.parseInt(scanner.nextLine());
         if (valoreVolume > 0 && valoreVolume < this.volume) {
             setVolume(valoreVolume);
         } else {
-            System.out.println("Impossibile abbasare il volume, prego inserire valore corretto:");
+            System.out.println("Can't turn down the volume, please try again:");
             valoreVolume = Integer.parseInt(scanner.nextLine());
         }
     }
@@ -54,12 +50,12 @@ public class Registrazione extends ElementoMultimedia implements Play {
         this.volume = volume;
     }
 
-    public int getDurata() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDurata(int durata) {
-        this.duration = durata;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
 

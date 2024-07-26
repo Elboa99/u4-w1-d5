@@ -5,26 +5,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ciao utente, imposta il volume della tua traccia:");
+        System.out.println("User, set the volume of the track:");
         int volume = Integer.parseInt(scanner.nextLine());
 
-        Registrazione registrazioneAudio = new Registrazione("Audio Whatsapp", volume, 15);
+        Registrazione registrazioneAudio = new Registrazione("Recording", volume, 15);
         registrazioneAudio.play();
 
-        System.out.println("Vuole gestire il livello del volume? Prego rispondere con alza/abbassa");
+        System.out.println("Wanna adjust the volume? reply with raise/lower");
         String risposta = scanner.nextLine();
 
         switch (risposta) {
-            case "alza":
+            case "raise":
                 registrazioneAudio.alzaVolume();
                 registrazioneAudio.play();
                 break;
-            case "abbassa":
+            case "lower":
                 registrazioneAudio.abbassaVolume();
                 registrazioneAudio.play();
                 break;
         }
-
-
     }
 }
+
+
+
+

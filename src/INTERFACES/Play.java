@@ -1,4 +1,4 @@
-package INTAERFACES;
+package INTERFACES;
 
 public interface Play {
     void play();
